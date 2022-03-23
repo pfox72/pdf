@@ -10,7 +10,7 @@ const App = () => {
   const [documentFolder, setDocumentFolder] = useState(Platform.OS === 'android' ? 'file:///android_asset/' : '');
 
   const onStateChange = (e: any) => {
-    if (e.currentPageIndex) {
+    if (e.currentPageIndex !== undefined) {
       setCurrentPageNumber(e.currentPageIndex);
     }
   };
